@@ -1,5 +1,5 @@
 class RegisteredApplication < ActiveRecord::Base
-  belongs_to :user
+  has_many :events
 
     validates :name, :url, presence: true
     validates :name, :url, uniqueness: true

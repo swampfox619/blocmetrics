@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$('.event').find('h2').html()
+    if this 
+$('.event').next().find('h2').html()
