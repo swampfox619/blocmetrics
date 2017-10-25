@@ -1,0 +1,20 @@
+<div>
+    <h1>Registered Applications for <%= current_user.email %></h1>
+    <%= link_to 'Register a new app', new_registered_application_path %>
+</div>
+<div style="display: flex;">
+    <div style="width: 20%;">Application Name:</div>
+    <div style="width: 20%;">Application Url:</div>
+    <div style="width: 60%;">Actions:</div>
+</div>
+<% if current_user.registered_applications %>
+    <% current_user.registered_applications.each do |app| %>
+        <div style="display: flex;">
+            <div style="width: 20%;"><%= app.name %></div>
+            <div style="width: 20%;"><%= app.url %></div>
+            <div style="width: 20%;"><%= link_to 'Show', registered_application_path(app) %></div>
+            <div style="width: 20%;"><%= link_to 'Edit', edit_registered_application_path(app) %></div>
+            <div style="width: 20%;"><%= link_to 'Destroy', registered_application_path(app), method: :delete, data: { confirm: 'Are you sure?' } %></div>
+        </div>
+    <% end %>
+<% end %>

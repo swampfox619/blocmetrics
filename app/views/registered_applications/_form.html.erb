@@ -1,0 +1,14 @@
+<%= form_for(@app) do |f| %>
+    <div>
+        <%= f.label :name, placeholder: 'Your application name'%>
+        <%= f.text_field :name %>
+    </div>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <div>
+        <%= f.label :url, placeholder: 'Your application URL' %>
+        <%= f.text_field :url %>
+    </div>
+    <div>
+        <%= f.submit "Submit" %>
+    </div>
+<% end %>
