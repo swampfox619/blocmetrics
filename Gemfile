@@ -9,7 +9,6 @@
  end
  
  group :development do
-   gem 'sqlite3'
    gem 'web-console', '~> 2.0'
  end
  
@@ -21,6 +20,9 @@
  gem 'bootstrap'
  gem 'figaro'
  gem 'devise'
+ gem 'chartkick'
+ gem 'pg'
+ gem 'groupdate'
 
  group :development, :test do
    gem 'byebug'

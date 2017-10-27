@@ -8,3 +8,9 @@
             <h2><%= event %> | Count: <%= count.length %></h2>
         </div>
 <% end %>
+<div class="event">
+    <%= pie_chart @app.events.group(:name).count %>
+</div>
+<div>
+    <%= line_chart @app.events.group_by_day(:created_at).count %>
+</div>

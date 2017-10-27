@@ -31,6 +31,7 @@ end
     Event.create!(
         name: events.sample,
         registered_application_id: apps.sample.id,
+        created_at: Faker::Time.between(49.days.ago, Date.today)
         )
 end
 
